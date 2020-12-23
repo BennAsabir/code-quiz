@@ -68,16 +68,8 @@ input{
     font-family: Verdana, Tahoma, sans-serif; 
 }
 
-.highScore{
-    color: #4B0082; 
-    float:left;
-    text-align: left;
-    align-content: left;
-    padding: 10px; 
-    font-family: Verdana, Tahoma, sans-serif; 
-}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     #button-display{
         width:75%;
     }
