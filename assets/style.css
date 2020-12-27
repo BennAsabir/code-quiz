@@ -102,6 +102,7 @@ li {
     margin-top: 20px;
     border-top: 1px solid lightgray;
 }
+ /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
 
 /* A Media Query max-width: 786px */
@@ -131,10 +132,10 @@ li {
         }
     }
         
-    /* A Media Query max-width: 640px */
-    @media screen and (max-width: 640px) {
+    /* A Media Query max-width: 575px */
+    @media screen and (max-width: 575px) {
      body {
-            min-width: 640px;
+            min-width: 575px;
         }
 
     #wrapper {
