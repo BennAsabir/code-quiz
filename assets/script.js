@@ -65,7 +65,7 @@ timer.addEventListener("click", function () {
 
 // RENDERS QUESTIONS
 function render(questionIndex) {
-    // CLEARS EXISTING DATA
+// CLEARS EXISTING DATA
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
    
@@ -74,7 +74,7 @@ function render(questionIndex) {
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // New for each for question choices
+// NEW FOR EACH QUESTION CHOICE
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
@@ -91,23 +91,23 @@ function compare(event) {
 
         var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
-        // CORRECT CONDTION
+// CORRECT CONDTION
         if (element.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "CORRECT! The answer is:  " + questions[questionIndex].answer;
             
         } else {
-        // WILL DEDUCT 10 SECONDS OF secondsLeft IF ANSWER WRONG
+// WILL DEDUCT 10 SECONDS OF secondsLeft IF ANSWER WRONG
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "WRONG! The correct answer is:  " + questions[questionIndex].answer;
         }
 
     }
-    // DETERMINES QUESTION USER IS ON
+// DETERMINES QUESTION USER IS ON
     questionIndex++;
 
     if (questionIndex >= questions.length) {
-    // APPENDS LAST PAGE WITH USER STATS
+// APPENDS LAST PAGE WITH USER STATS
         allDone();
         createDiv.textContent = "END OF QUIZ!" + " " + "YOU GOT  " + score + "/" + questions.length + " CORRECT!";
     } else {
@@ -144,14 +144,14 @@ function allDone() {
         questionsDiv.appendChild(createP2);
     }
 
-    // Label
+    // LABEL
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "ENTER YOUR INITIALS: ";
 
     questionsDiv.appendChild(createLabel);
 
-    // input
+    // INPUT
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -159,7 +159,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    // submit
+    // SUBMIT
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -167,7 +167,7 @@ function allDone() {
 
     questionsDiv.appendChild(createSubmit);
 
-    // Event listener to capture initials and local storage for initials and score
+    // CAPTURE INITIALS AND LOCAL STORAGE FOR SCORE
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
 
@@ -191,7 +191,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
 
-            // Travels to final page
+            // GOES TO FINAL PAGE
             window.location.replace("./highscore.html");
         }
     });

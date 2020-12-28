@@ -1,15 +1,15 @@
-// Declared variables
+// DECLARED VARIABLES
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 
-// Event listener to clear scores 
+// CLEAR HIGHSCORE
 clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
 });
 
-// Retreives local stroage 
+// LOCAL STORAGE
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
 
@@ -23,7 +23,7 @@ if (allScores !== null) {
 
     }
 }
-// Event listener to move to index page
+// MOVE BACK TO INDEX PAGE
 goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
 });
