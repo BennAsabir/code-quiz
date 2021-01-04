@@ -121,7 +121,7 @@ function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // HEADING:
+    // HEADING
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "ALL DONE!"

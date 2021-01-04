@@ -1,3 +1,4 @@
+/* WRAPPER */
 #wrapper {
     margin: auto;
     display: flex;
@@ -7,6 +8,8 @@
     height: 500px;
     border: 1px solid purple;
 }
+
+/* VIEW HIGHSCORES */
 #hscore {
     display: flex;
     justify-content: space-between;
@@ -22,6 +25,7 @@ p {
     text-align: center;
 }
 
+/* START QUIZ BUTTON */
 #startTime {
     background-color: purple;
     display: flex;
@@ -32,11 +36,13 @@ p {
     margin: auto;
 }
 
+/* QUESTIONS */
 #questionsDiv {
     margin: 20px;
     font-size: 25px;
 }
 
+/* GO BACK BUTTON */
 #goBack {
     background-color: purple;
     padding: 10px;
@@ -49,6 +55,7 @@ p {
     text-decoration: none;
 }
 
+/* CLEAR BUTTON */
 #clear {
     background-color: purple;
     padding: 10px;
@@ -68,6 +75,7 @@ textarea {
     margin: 20px;
 }
 
+/* SUBMIT BUTTON */
 #Submit {
     background-color: purple;
     margin-left: 33%;
@@ -76,6 +84,7 @@ textarea {
     color: white;
 }
 
+/* VIEW HIGHSCORE PAGE START */
 label {
     display: flex;
     justify-content: center;
@@ -87,6 +96,7 @@ input {
     width: 50%;
     border: 1px solid lightgray;
 }
+/* VIEW HIGHSCORE PAGE END */
 
 h1 {
     text-align: center;
